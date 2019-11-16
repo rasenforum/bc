@@ -37,6 +37,19 @@ $) sudo docker run hello-world
 
 <br>
 
+> docker 예제(MySQL)
+```
+$) sudo apt install mysql-install
+$) sudo docker run -d -p 3306:3306 -e MYSQL_ALLOW_EMPTY_PASSWORD=true —name mysql mysql:5.7
+$) mysql -h 127.0.0.1 -uroot
+$) show database;
+```
+
+```
+$) mysql -h 127.0.0.1 -uroot
+```
+<br>
+
 > docker 권한 주기(일반 사용자)
 ```
 $) sudo usermod -aG docker $(whoami)
