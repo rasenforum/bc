@@ -99,15 +99,16 @@ $) ps -ef | grep bitcoin
 $) netstat -anp | grep 8332
 $) watch -n 1 du ~/.bitcoin
 ```
-<br>
+
+<br><br>
 
 - genesis block 확인
 
-![bitcoin_qt](./bit-img/bitcoin_genesis.png) 
-$) sudo apt-get install bless (hex editor tool)
-$) bless
+$) sudo apt-get install bless (hex editor tool)<br>
+$) bless<br>
 $) block 파일 열기
 
+<br><br>
 
 
 > bitcoin core 포트
@@ -129,8 +130,6 @@ $) bitcoin-cli stop
 ```
 https://github.com/bitcoin/bitcoin/blob/4b51ed89cfce9870a20d75001fae3b68ac1dfd86/src/chainparams.cpp
 ```
-
-![bitcoin_dns](./bit-img/bitcoin_dns.png | width=100) 
 
 
 
@@ -488,5 +487,3 @@ BTCEXP_PORT=8080
 ```
 btc-rpc-explorer --port 8080 --bitcoind-port 18332 --bitcoind-cookie ~/.bitcoin/regtest/.cookie
 ``` 
-
-### 8.4 explorer port 확인하기
