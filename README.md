@@ -31,7 +31,7 @@ https://github.com/fofoeet/knowledge/tree/master/DOCKER
 $) curl -O https://gethstore.blob.core.windows.net/builds/geth-alltools-linux-amd64-1.9.7-a718daa6.tar.gz
 $) tar -xvzf geth-alltools-linux-amd64-1.9.7-a718daa6.tar.gz
 $) cd geth-alltools-linux-amd64-1.9.7-a718daa6
-$) cp ./* /usr/local/bin
+$) sudo cp ./* /usr/local/bin
 $) geth version
 ```
 <br>
@@ -180,10 +180,10 @@ $) tree -L 4 peerData2 //오른쪽 창에서 실행
 #### 2.7 ethereum 시작하기
 ```
 $) vi runPeer1.sh
-> geth --allow-insecure-unlock --unlock "0" --password peerData1/password.txt --nousb --datadir peerData1 --syncmode 'full' --port 9091 --rpc --rpcport 7071 --rpcaddr 127.0.0.1 --rpccorsdomain "*" --rpcapi "eth,net,web3,personal,miner" --bootnodes 'enode://부트노드enode@127.0.0.1:30301' --networkid 13579 --gasprice '1' console 2 >> /home/test/edu1/peer1.log//왼쪽 상단 터미널에서 실행
+> geth --allow-insecure-unlock --unlock "0" --password peerData1/password.txt --nousb --datadir peerData1 --syncmode 'full' --port 9091 --rpc --rpcport 7071 --rpcaddr 127.0.0.1 --rpccorsdomain "*" --rpcapi "eth,net,web3,personal,miner" --bootnodes 'enode://fc733bf9ff476a100b19aa558f6cc8e0b5adf36a0147c94eb5989edb80295eb38d16eeadd2a0b3734da08c5007ed2396d0c9adbb5404f1e3d25ef2bf1925f2a1@127.0.0.1:0?discport=30301' --networkid 13579 --gasprice '1' console 2 >> /home/test/ethereum/geth/peer1.log
 
 $) vi runPeer2.sh     
-> geth --allow-insecure-unlock --unlock "0" --password peerData2/password.txt --nousb --datadir peerData2 --syncmode 'full' --port 9092 --rpc --rpcport 7072 --rpcaddr 127.0.0.1 --rpccorsdomain "*" --rpcapi "eth,net,web3,personal,miner" --bootnodes 'enode://부트노드@127.0.0.1:30301' --networkid 13579 --gasprice '1' console 2 >> /home/test/edu1/peer2.log //오른쪽 상단 터미널에서 실행
+> geth --allow-insecure-unlock --unlock "0" --password peerData2/password.txt --nousb --datadir peerData2 --syncmode 'full' --port 9092 --rpc --rpcport 7072 --rpcaddr 127.0.0.1 --rpccorsdomain "*" --rpcapi "eth,net,web3,personal,miner" --bootnodes 'enode://fc733bf9ff476a100b19aa558f6cc8e0b5adf36a0147c94eb5989edb80295eb38d16eeadd2a0b3734da08c5007ed2396d0c9adbb5404f1e3d25ef2bf1925f2a1@127.0.0.1:0?discport=30301' --networkid 13579 --gasprice '1' console 2 >> /home/test/ethereum/geth/peer2.log
 
 ```
 
